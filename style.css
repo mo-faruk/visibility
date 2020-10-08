@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: orange;
+    
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top:25%;
+    left:12%;
+    margin: -160px;
+    text-align: center;
+    line-height: 300px;
+    background: #fff;
+    color: #03446A;
+    font-size: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    animation-name: ridoy;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes ridoy {
+    0% { border-radius: 0%; }
+    25% { background-color: green;color:red; }
+    50% { background-color: blueviolet;color:#fff;}
+    70% { background-color: yellow;color:blue;}
+    100% { border-radius: 50%;background-color:tomato;color:green; }
+}
+.photo-card {
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin: -175px;
+    border: 0px solid black;
+    perspective: 500px;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.photo-card:hover .content {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 60px;
+    background-image: url(img/baby.jpg);
+    background-size: cover;
+    background-position: center;
+    color: orange;
+    line-height: 950px;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+.back {
+    background-image: url(img/hi.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    color: red;
+}
+h1 {
+    background-clip: url(img/hello.jpg);
+    font-size: 67px;
+    background-image: url(img/hello.jpg);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: impact;
+    margin-top: -17px;
+    text-align: right
+    
+}
+#box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.btn {
+    top: 253px;
+    left: 303px;
+    border: 1px solid #78e08f;
+    color: #78e08f;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.5s ease 0.2s;
+    box-shadow: 0 0 15px inset;
+}
+.btn:after {
+    content: "";
+    background: #78e08f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.5s ease 0.2s;
+}
+.btn:hover {
+    color: #fff;
+}
+.btn:hover:after {
+    width: 100%;
+}
+
+
+
+
+
+
+/*
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: orange;
+    
+}
+h1 {
+    background-clip: url(img/hello.jpg);
+    font-size: 67px;
+    background-image: url(img/hello.jpg);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: impact;
+    margin-top: -17px;
+    text-align: right
+    
+}
+.card {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top:25%;
+    left:12%;
+    margin: -160px;
+    text-align: center;
+    line-height: 300px;
+    background: #fff;
+    color: #03446A;
+    font-size: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    animation-name: ridoy;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes ridoy {
+    0% { border-radius: 0%; }
+    25% { background-color: green;color:red; }
+    50% { background-color: blueviolet;color:#fff;}
+    70% { background-color: yellow;color:blue;}
+    100% { border-radius: 50%;background-color:tomato;color:green; }
+}
+.photo-card {
+    width: 400px;
+    height: 550px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin: -175px;
+    border: 0px solid black;
+    perspective: 500px;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.photo-card:hover .content {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 60px;
+    background-image: url(img/baby.jpg);
+    background-size: cover;
+    background-position: center;
+    color: orange;
+    line-height: 950px;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+.back {
+    background-image: url(img/hi.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    color: red;
+}
+#box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.btn {
+    top: 253px;
+    left: 303px;
+    border: 1px solid #78e08f;
+    color: #78e08f;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.5s ease 0.2s;
+    box-shadow: 0 0 15px inset;
+}
+.btn:after {
+    content: "";
+    background: #78e08f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.5s ease 0.2s;
+}
+.btn:hover {
+    color: #fff;
+}
+.btn:hover:after {
+    width: 100%;
+}
+*/
